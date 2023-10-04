@@ -1,0 +1,47 @@
+.poi-editor-poi:hover {
+    background-color: hsl(223, 62%, 19%);
+}
+
+.poi-editor-poi {
+    padding: 5px;
+}
+
+.poi-editor-poi-selected {
+    padding: 5px;
+    background-color: hsl(223, 62%, 19%);
+
+}
+
+.poi-editor-title {
+    margin:0;
+    font-weight: bold;
+}
+
+.poi-editor-description {
+    margin:0
+}
+
+.poi-editor-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.buttons-horizontal {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10px;
+}
+
+ul.buttons-horizontal li {
+    display: inline-block;
+}
+
+ul.buttons-horizontal li:hover {
+    background-color: hsl(223, 62%, 25%);
+}

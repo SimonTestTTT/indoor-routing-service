@@ -1,0 +1,16 @@
+.poi:hover {
+    background-color: hsl(223, 62%, 19%);
+}
+
+.poi {
+    padding: 5px;
+}
+
+.poi-title {
+    margin:0;
+    font-weight: bold;
+}
+
+.poi-description {
+    margin:0
+}

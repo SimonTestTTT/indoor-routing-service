@@ -1,0 +1,56 @@
+.text-bright {
+    color: white;
+
+}
+
+.text-muted {
+    color: gray;
+}
+
+
+.center {
+    flex: auto;
+    width: 100%;
+}
+
+.close {
+    color: white;
+    background-color: #0D1937;
+    margin-top: auto;
+    padding-bottom: 15px;
+}
+
+button.close {
+    border: none;
+}
+
+button.close:focus {
+    border: none;
+    outline: none;
+}
+
+button.close:focus{
+    outline:none !important;
+}
+
+.full-height {
+    height: 100%;
+}
+
+.flex-wrapper { 
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.footer {
+    min-height: 10vh;
+    min-height: calc(var(--vh, 1vh) * 10);
+    height: 20vh;
+    height: calc(var(--vh, 1vh) * 20);
+}

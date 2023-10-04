@@ -1,0 +1,61 @@
+version: "3.2"
+services:
+
+# database
+  mongodb:
+    image: mongo
+    restart: unless-stopped
+    ports:
+     - "27017:27017"
+    volumes:
+     - "./mongo_data:/data/db"
+    networks:
+     - omlox-nav
+  
+  omlox-nav-api:
+    image: omlox-nav-api:latest
+    build: ./api
+    container_name: omlox-nav-api
+    restart: unless-stopped
+    depends_on: 
+     - "mongodb"
+    ports:
+      - "9081:3003"
+    volumes:
+      - "./api/config/:/app/config"
+    networks:
+      - omlox-nav
+
+  omlox-nav-ui:
+    image: omlox-nav-ui:latest
+    build: ./ui
+    container_name: omlox-nav-ui
+    restart: unless-stopped
+    volumes:
+      - "./ui/config/:/app/build/config" 
+    ports:
+      - "9080:3000"
+    networks:
+      - omlox-nav
+
+# reverse proxy
+  omlox-nav-apache:
+    image: httpdssl:latest
+    build: ./apache
+    container_name: omlox-nav-apache
+    restart: unless-stopped
+    depends_on:
+      - omlox-nav-ui
+      - omlox-nav-api
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - "./apache/conf:/usr/local/apache2/conf"
+      - "./apache/htdocs:/usr/local/apache2/htdocs"
+      - "./apache/logs:/usr/local/apache2/logs"
+    networks:
+      - omlox-nav
+
+networks:
+  omlox-nav:

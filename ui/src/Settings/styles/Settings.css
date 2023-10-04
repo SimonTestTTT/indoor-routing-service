@@ -1,0 +1,29 @@
+.QRReader-container {
+    max-width: 60vh;
+    max-width: calc(var(--vh, 1vh) * 60);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.QRReader-overlay {
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+    box-sizing: border-box;
+    border: 50px solid transparent;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.scrollable {
+    max-height: 70vh;
+    max-height: calc(var(--vh, 1vh) * 70);
+    height: 70vh;
+    height: calc(var(--vh, 1vh) * 70);
+    overflow-y: auto;
+}
+
+.settingsSection {
+    padding-top: 10px;
+}

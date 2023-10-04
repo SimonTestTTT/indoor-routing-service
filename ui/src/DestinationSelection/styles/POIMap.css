@@ -1,0 +1,10 @@
+.poi-map {
+    background-color: white;
+    height: 100%;
+    max-height: 50vh;
+    max-height: calc(var(--vh, 1vh) * 50);
+}
+
+.leaflet-control-attribution {
+    display: none;
+}

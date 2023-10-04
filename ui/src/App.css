@@ -1,0 +1,12 @@
+.App {
+  text-align: center;
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+  width: 100vw;
+  overflow: hidden;
+}
+
+.dark-background {
+  background-color: #0D1937;
+}
+

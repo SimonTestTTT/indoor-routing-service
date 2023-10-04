@@ -1,0 +1,4 @@
+.text {
+    font-size: 5vh;
+    font-size: calc(var(--vh, 1vh) * 5);
+}

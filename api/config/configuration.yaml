@@ -1,0 +1,11 @@
+omlox_hub:
+  host: "127.0.0.1"
+  port: 8081
+  path: "/hub"
+api:
+  port: 3003
+db:
+  type: "mongodb"
+  config:
+    port: 27017
+    host: "mongodb"

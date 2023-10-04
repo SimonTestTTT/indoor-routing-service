@@ -1,0 +1,18 @@
+protocol: "http"
+wsProtocol: "ws"
+wssPort: "443" #Port when using wss
+wsPort: "80" #Port when using ws
+#static baseAPIurl = Config.protocol + "://" + window.location.hostname + ":" + Config.wsPort
+baseAPIurl: ""
+colors:
+  graph: "white" #Color of graph in Destination selection
+  path: "black" #Color of path in navigation hint
+  marker: "white" #Color of markers in map
+
+mapCenter:
+ - 48.820375166608805
+ - 9.066946824641235
+
+
+# static tileServer = "/tile/{z}/{x}/{y}.png" // If local tileserver is installed
+tileServer: "https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png" # If Internet Connection is available
